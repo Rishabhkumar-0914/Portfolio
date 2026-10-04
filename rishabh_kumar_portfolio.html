@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rishabh Kumar | Student &amp; Aspiring Web Developer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Rishabh Kumar — Student and aspiring web developer based in Kolkata, India. Skilled in JavaScript, HTML5, CSS3, C, C++, and MySQL. Explore projects, certifications, and academic background." />
+  <meta name="keywords" content="Rishabh Kumar, Web Developer, Kolkata, Frontend Developer, LUXORA, Portfolio, MCA, BCA, Techno India, Kalinga University" />
+  <meta name="author" content="Rishabh Kumar" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rishabh Kumar | Student &amp; Aspiring Web Developer" />
+  <meta property="og:description" content="Clean, Apple-inspired portfolio showcasing frontend projects, technical skills, and academic journey." />
+  <meta property="og:url" content="https://rishabhkumar.dev" />
+  <meta property="og:site_name" content="Rishabh Kumar Portfolio" />
+  
+  <!-- Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome CDN for Brand & Tech Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#E50914',
+              'red-hover': '#C50711',
+              'red-subtle': 'rgba(229, 9, 20, 0.12)',
+              'red-glow': 'rgba(229, 9, 20, 0.25)',
+              charcoal: '#0D0E11',
+              cardDark: '#14161B',
+              borderDark: '#23262F',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          boxShadow: {
+            'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+            'apple': '0 20px 40px -15px rgba(0, 0, 0, 0.5)',
+            'red-soft': '0 10px 25px -5px rgba(229, 9, 20, 0.3)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* CSS Variables for Dynamic Theme Customization */
+    :root {
+      --bg-base: #FAFAFC;
+      --bg-surface: #FFFFFF;
+      --bg-card: rgba(255, 255, 255, 0.85);
+      --border-color: rgba(226, 232, 240, 0.8);
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --glass-nav: rgba(255, 255, 255, 0.8);
+      --glass-border: rgba(0, 0, 0, 0.08);
+      --accent-red: #E50914;
+      --accent-glow: rgba(229, 9, 20, 0.15);
+      --badge-bg: #F1F5F9;
+    }
+
+    html.dark {
+      --bg-base: #090A0D;
+      --bg-surface: #101217;
+      --bg-card: rgba(18, 20, 26, 0.75);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --text-primary: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --glass-nav: rgba(14, 16, 22, 0.82);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --accent-red: #E50914;
+      --accent-glow: rgba(229, 9, 20, 0.22);
+      --badge-bg: rgba(255, 255, 255, 0.05);
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-primary);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    }
+
+    .glassmorphism {
+      background: var(--bg-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-color);
+    }
+
+    .nav-glass {
+      background: var(--glass-nav);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    /* Ambient lighting gradient background */
+    .hero-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(229, 9, 20, 0.12) 0%, rgba(229, 9, 20, 0) 55%);
+    }
+
+    /* Apple-style subtle interactive scale */
+    .apple-card {
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+    }
+    .apple-card:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Active navigation indicator */
+    .nav-link.active {
+      color: #E50914 !important;
+      font-weight: 600;
+    }
+
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    html.dark ::-webkit-scrollbar-thumb {
+      background: #272B35;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #E50914;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-red-600 selection:text-white flex flex-col min-h-screen">
+
+  <header class="fixed top-0 left-0 right-0 z-50 nav-glass transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Brand / Identity -->
+        <a href="#home" class="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand-red rounded-lg p-1" aria-label="Rishabh Kumar Homepage">
+          <div class="w-9 h-9 rounded-xl bg-brand-red flex items-center justify-center text-white font-display font-bold text-lg shadow-sm transition-transform group-hover:scale-105">
+            R
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-bold tracking-tight text-sm sm:text-base leading-none group-hover:text-brand-red transition-colors">
+              Rishabh Kumar
+            </span>
+            <span class="text-[10px] text-gray-500 dark:text-gray-400 font-medium tracking-wider uppercase">
+              Web Developer
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2" aria-label="Main Navigation">
+          <a href="#home" class="nav-link px-3 py-1.5 rounded-full text-xs lg:text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-red transition-colors active">Home</a>
+          <a href="#about" class="nav-link px-3 py-1.5 rounded-full text-xs lg:text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-red transition-colors">About</a>
+          <a href="#skills" class="nav-link px-3 py-1.5 rounded-full text-xs lg:text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-red transition-colors">Skills</a>
+          <a href="#education" class="nav-link px-3 py-1.5 rounded-full text-xs lg:text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-red transition-colors">Education</a>
+          <a href="#projects" class="nav-link px-3 py-1.5 rounded-full text-xs lg:text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-red transition-colors">Projects</a>
+          <a href="#certifications" class="nav-link px-3 py-1.5 rounded-full text-xs lg:text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-red transition-colors">Certifications</a>
+          <a href="#contact" class="nav-link px-3 py-1.5 rounded-full text-xs lg:text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-red transition-colors">Contact</a>
+        </nav>
+
+        <!-- Action Tools: Dark/Light Mode & Resume -->
+        <div class="flex items-center gap-2.5">
+          <!-- Theme Toggle Button -->
+          <button id="themeToggleBtn" type="button" class="p-2 sm:px-2.5 rounded-xl border border-gray-200 dark:border-white/10 hover:border-brand-red dark:hover:border-brand-red transition-colors text-gray-700 dark:text-gray-300 bg-white/50 dark:bg-white/5 focus:outline-none focus:ring-2 focus:ring-brand-red" aria-label="Toggle theme">
+            <i id="themeIcon" class="fa-solid fa-moon text-sm"></i>
+          </button>
+
+          <!-- Resume Modal Action -->
+          <button onclick="openResumeModal()" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white hover:bg-brand-red hover:text-white dark:hover:bg-brand-red transition-all shadow-sm">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Resume</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobileMenuBtn" type="button" class="md:hidden p-2 rounded-xl border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 hover:text-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open main menu">
+            <i id="menuIcon" class="fa-solid fa-bars text-base"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-gray-200 dark:border-white/10 bg-white/95 dark:bg-[#0D0E12]/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-2 transition-all">
+      <a href="#home" class="mobile-nav-item block px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-red-50 dark:hover:bg-brand-red/10 hover:text-brand-red">Home</a>
+      <a href="#about" class="mobile-nav-item block px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-red-50 dark:hover:bg-brand-red/10 hover:text-brand-red">About</a>
+      <a href="#skills" class="mobile-nav-item block px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-red-50 dark:hover:bg-brand-red/10 hover:text-brand-red">Skills &amp; Tools</a>
+      <a href="#education" class="mobile-nav-item block px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-red-50 dark:hover:bg-brand-red/10 hover:text-brand-red">Education</a>
+      <a href="#projects" class="mobile-nav-item block px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-red-50 dark:hover:bg-brand-red/10 hover:text-brand-red">Projects</a>
+      <a href="#certifications" class="mobile-nav-item block px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-red-50 dark:hover:bg-brand-red/10 hover:text-brand-red">Certifications</a>
+      <a href="#contact" class="mobile-nav-item block px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-red-50 dark:hover:bg-brand-red/10 hover:text-brand-red">Contact</a>
+      <div class="pt-3 border-t border-gray-100 dark:border-white/5 flex gap-2">
+        <button onclick="openResumeModal()" class="w-full py-2.5 rounded-lg text-xs font-semibold text-center bg-brand-red text-white flex items-center justify-center gap-2">
+          <i class="fa-solid fa-file-pdf"></i> Resume Preview
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-24 sm:pt-28">
+    
+    <section id="home" class="relative overflow-hidden hero-glow min-h-[calc(100vh-7rem)] flex items-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Hero Text Content -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            
+            <!-- Apple-style Badge Pill -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur-md shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="text-xs font-medium text-gray-700 dark:text-gray-300">Available for Opportunities</span>
+              <span class="text-xs text-gray-400 dark:text-gray-600">|</span>
+              <span class="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1">
+                <i class="fa-solid fa-location-dot text-brand-red"></i> Kolkata, India
+              </span>
+            </div>
+
+            <!-- Main Heading with Editorial Precision -->
+            <div class="space-y-2">
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-display text-gray-950 dark:text-white leading-[1.12]">
+                Rishabh <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-500">Kumar</span>
+              </h1>
+              <p class="text-lg sm:text-xl md:text-2xl font-medium text-gray-700 dark:text-gray-300 font-display">
+                Student &amp; Aspiring Web Developer
+              </p>
+            </div>
+
+            <!-- Concise Honest Value Statement -->
+            <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              Student and aspiring web developer with strong foundational skills in <span class="text-gray-900 dark:text-gray-200 font-medium">JavaScript</span>, <span class="text-gray-900 dark:text-gray-200 font-medium">HTML5</span>, <span class="text-gray-900 dark:text-gray-200 font-medium">CSS3</span>, <span class="text-gray-900 dark:text-gray-200 font-medium">C</span>, and <span class="text-gray-900 dark:text-gray-200 font-medium">C++</span>. Passionate about engineering high-precision user interfaces and robust web experiences.
+            </p>
+
+            <!-- Call to Actions -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
+              <a href="#projects" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm bg-brand-red hover:bg-brand-red-hover text-white shadow-red-soft transition-all duration-200 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-red focus:ring-offset-2">
+                <span>View My Projects</span>
+                <i class="fa-solid fa-arrow-down text-xs"></i>
+              </a>
+
+              <a href="resume.pdf" download="Rishabh_Kumar_Resume.pdf" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm bg-white dark:bg-white/10 text-gray-800 dark:text-white border border-gray-200 dark:border-white/10 hover:border-brand-red dark:hover:border-brand-red hover:text-brand-red dark:hover:text-brand-red transition-all duration-200 shadow-sm">
+                <i class="fa-solid fa-download text-xs"></i>
+                <span>Download Resume</span>
+              </a>
+
+              <a href="#contact" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-medium text-sm text-gray-600 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-red transition-colors">
+                <span>Contact Me</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+
+            <!-- Quick Meta Badges -->
+            <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-gray-500 dark:text-gray-400">
+              <span class="flex items-center gap-1.5">
+                <i class="fa-solid fa-graduation-cap text-brand-red"></i> BCA Graduate (Techno India Univ)
+              </span>
+              <span class="flex items-center gap-1.5">
+                <i class="fa-solid fa-book-open text-brand-red"></i> MCA Ongoing (Kalinga Univ)
+              </span>
+            </div>
+          </div>
+
+          <!-- Hero Visual: Portrait Presentation -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-64 sm:w-72 md:w-80 aspect-[4/5] rounded-3xl p-2 glassmorphism shadow-apple group">
+              <!-- Corner Accent Lights -->
+              <div class="absolute -top-3 -right-3 w-20 h-20 bg-brand-red/20 rounded-full blur-2xl pointer-events-none"></div>
+              <div class="absolute -bottom-3 -left-3 w-24 h-24 bg-red-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+              <div class="w-full h-full rounded-2xl overflow-hidden relative bg-gray-200 dark:bg-brand-charcoal border border-black/5 dark:border-white/10 flex items-center justify-center">
+                <!-- User portrait image with graceful fallback -->
+                <img 
+                  id="userProfileImg" 
+                  src="profile.jpg" 
+                  alt="Rishabh Kumar" 
+                  class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800'; this.alt='Rishabh Kumar Portrait Placeholder';"
+                />
+                
+                <!-- Floating Info Badge on Card -->
+                <div class="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-black/60 backdrop-blur-md border border-white/15 text-white flex items-center justify-between">
+                  <div>
+                    <p class="text-xs font-semibold leading-tight">Rishabh Kumar</p>
+                    <p class="text-[10px] text-gray-300">Aspiring Web Developer</p>
+                  </div>
+                  <div class="w-7 h-7 rounded-lg bg-brand-red flex items-center justify-center text-white text-xs">
+                    <i class="fa-solid fa-code"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 md:py-28 border-t border-gray-200/60 dark:border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14 md:mb-20">
+          <p class="text-xs uppercase tracking-widest text-brand-red font-semibold mb-2">Background &amp; Profile</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-gray-950 dark:text-white">
+            About Me
+          </h2>
+          <p class="mt-3 text-base text-gray-600 dark:text-gray-400">
+            A cohesive trajectory from foundational schooling to higher computer applications study.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Narrative Card -->
+          <div class="lg:col-span-7 glassmorphism p-6 sm:p-8 rounded-3xl space-y-5">
+            <h3 class="text-xl font-bold font-display text-gray-900 dark:text-white flex items-center gap-2.5">
+              <span class="w-2.5 h-6 rounded-full bg-brand-red inline-block"></span>
+              Engineering Modern Web Solutions
+            </h3>
+            
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
+              I began my formal schooling journey completing Class 10 from <strong class="text-gray-900 dark:text-white font-semibold">Delhi Public School (DPS) North Kolkata</strong> and Class 12 from <strong class="text-gray-900 dark:text-white font-semibold">GD Goenka Public School</strong>.
+            </p>
+
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
+              Driven by an enthusiasm for computation and software architectures, I pursued my <strong class="text-gray-900 dark:text-white font-semibold">Bachelor of Computer Applications (BCA)</strong> at <strong class="text-gray-900 dark:text-white font-semibold">Techno India University, Kolkata</strong>, graduating with a cumulative <strong class="text-brand-red font-semibold">7.35 CGPA</strong>.
+            </p>
+
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
+              I am currently advancing my computer science proficiency through a <strong class="text-gray-900 dark:text-white font-semibold">Master of Computer Applications (MCA)</strong> from <strong class="text-gray-900 dark:text-white font-semibold">Kalinga University, Raipur</strong> (2025 – 2027). My focus remains anchored on front-end web engineering, clean system logic, modular state handling, and accessible UI development.
+            </p>
+
+            <!-- Key Attributes Pill List -->
+            <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-lg text-xs font-medium bg-red-500/10 text-brand-red border border-red-500/20">BCA Graduate</span>
+              <span class="px-3 py-1 rounded-lg text-xs font-medium bg-red-500/10 text-brand-red border border-red-500/20">MCA Candidate</span>
+              <span class="px-3 py-1 rounded-lg text-xs font-medium bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">Frontend Devotee</span>
+              <span class="px-3 py-1 rounded-lg text-xs font-medium bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">Problem Solver</span>
+            </div>
+          </div>
+
+          <!-- Academic Highlights Bento Grid -->
+          <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="glassmorphism p-5 rounded-2xl apple-card border-l-4 border-l-brand-red">
+              <span class="text-xs uppercase font-semibold text-gray-400">Class X</span>
+              <h4 class="text-base font-bold text-gray-900 dark:text-white mt-1">DPS North Kolkata</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Foundational schooling &amp; secondary education.</p>
+            </div>
+
+            <div class="glassmorphism p-5 rounded-2xl apple-card border-l-4 border-l-brand-red">
+              <span class="text-xs uppercase font-semibold text-gray-400">Class XII</span>
+              <h4 class="text-base font-bold text-gray-900 dark:text-white mt-1">GD Goenka</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Higher secondary education with analytic focus.</p>
+            </div>
+
+            <div class="glassmorphism p-5 rounded-2xl apple-card border-l-4 border-l-brand-red sm:col-span-2">
+              <div class="flex justify-between items-start">
+                <div>
+                  <span class="text-xs uppercase font-semibold text-brand-red">Undergraduate (2022 - 2025)</span>
+                  <h4 class="text-lg font-bold text-gray-900 dark:text-white mt-0.5">BCA — Techno India University</h4>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Kolkata, West Bengal</p>
+                </div>
+                <div class="text-right">
+                  <span class="text-lg font-extrabold text-brand-red font-display">7.35</span>
+                  <span class="text-[10px] block text-gray-400">CGPA</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="glassmorphism p-5 rounded-2xl apple-card border-l-4 border-l-brand-red sm:col-span-2 bg-gradient-to-br from-brand-red/5 to-transparent">
+              <span class="text-xs uppercase font-semibold text-emerald-500 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Currently Pursuing (2025 - 2027)
+              </span>
+              <h4 class="text-lg font-bold text-gray-900 dark:text-white mt-0.5">MCA — Kalinga University</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Raipur, Chhattisgarh &bull; Advanced computational theory &amp; applications</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="skills" class="py-20 md:py-28 bg-gray-50/50 dark:bg-white/[0.01] border-t border-gray-200/60 dark:border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 md:mb-20">
+          <p class="text-xs uppercase tracking-widest text-brand-red font-semibold mb-2">Technical Competency</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-gray-950 dark:text-white">
+            Skills &amp; Capabilities
+          </h2>
+          <p class="mt-3 text-base text-gray-600 dark:text-gray-400">
+            Truthful, qualitative evaluation of programming, markup, and database technologies.
+          </p>
+        </div>
+
+        <!-- 3 Categorized Blocks: Programming, Web Development, Database -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- Category 1: Programming Foundations -->
+          <div class="glassmorphism p-6 sm:p-7 rounded-3xl space-y-6">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-lg">
+                <i class="fa-solid fa-terminal"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-lg text-gray-900 dark:text-white">Programming</h3>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Logic &amp; Algorithmic Core</p>
+              </div>
+            </div>
+
+            <!-- Skill Cards -->
+            <div class="space-y-4">
+              <!-- C -->
+              <div class="p-4 rounded-2xl bg-white dark:bg-white/5 border border-gray-200/80 dark:border-white/10 apple-card">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-2.5">
+                    <span class="w-7 h-7 rounded-lg bg-blue-500/10 text-blue-500 font-mono font-bold text-xs flex items-center justify-center">C</span>
+                    <span class="font-semibold text-sm text-gray-900 dark:text-white">C Language</span>
+                  </div>
+                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-medium border border-emerald-500/20">Strong Foundation</span>
+                </div>
+                <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                  Pointers, structural memory models, arrays, data structures, and procedural algorithm execution.
+                </p>
+              </div>
+
+              <!-- C++ -->
+              <div class="p-4 rounded-2xl bg-white dark:bg-white/5 border border-gray-200/80 dark:border-white/10 apple-card">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-2.5">
+                    <span class="w-7 h-7 rounded-lg bg-indigo-500/10 text-indigo-500 font-mono font-bold text-xs flex items-center justify-center">C++</span>
+                    <span class="font-semibold text-sm text-gray-900 dark:text-white">C++</span>
+                  </div>
+                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-medium border border-emerald-500/20">Strong Foundation</span>
+                </div>
+                <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                  Object-Oriented Programming (OOP), encapsulation, inheritance, polymorphism, and basic STL patterns.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Web Development -->
+          <div class="glassmorphism p-6 sm:p-7 rounded-3xl space-y-6">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-lg">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-lg text-gray-900 dark:text-white">Web Development</h3>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Modern Frontend Stack</p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <!-- HTML5 -->
+              <div class="p-4 rounded-2xl bg-white dark:bg-white/5 border border-gray-200/80 dark:border-white/10 apple-card">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-2.5">
+                    <i class="fa-brands fa-html5 text-orange-500 text-lg"></i>
+                    <span class="font-semibold text-sm text-gray-900 dark:text-white">HTML5</span>
+                  </div>
+                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-medium border border-emerald-500/20">Strong Foundation</span>
+                </div>
+                <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                  Semantic document structures, accessibility considerations, meta tags, and Web API elements.
+                </p>
+              </div>
+
+              <!-- CSS3 -->
+              <div class="p-4 rounded-2xl bg-white dark:bg-white/5 border border-gray-200/80 dark:border-white/10 apple-card">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-2.5">
+                    <i class="fa-brands fa-css3-alt text-blue-500 text-lg"></i>
+                    <span class="font-semibold text-sm text-gray-900 dark:text-white">CSS3</span>
+                  </div>
+                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-medium border border-emerald-500/20">Strong Foundation</span>
+                </div>
+                <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                  Responsive design, Flexbox, Grid, CSS Variables, smooth transitions, and Glassmorphism styling.
+                </p>
+              </div>
+
+              <!-- JavaScript -->
+              <div class="p-4 rounded-2xl bg-white dark:bg-white/5 border border-gray-200/80 dark:border-white/10 apple-card">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-2.5">
+                    <i class="fa-brands fa-js text-yellow-400 text-lg"></i>
+                    <span class="font-semibold text-sm text-gray-900 dark:text-white">JavaScript (ES6+)</span>
+                  </div>
+                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-medium border border-emerald-500/20">Strong Foundation</span>
+                </div>
+                <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                  DOM manipulation, event handling, asynchronous fetching, localStorage state, and SPA flow control.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Database & Data Modeling -->
+          <div class="glassmorphism p-6 sm:p-7 rounded-3xl space-y-6">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-lg">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-lg text-gray-900 dark:text-white">Database</h3>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Data Persistence &amp; Queries</p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <!-- MySQL -->
+              <div class="p-4 rounded-2xl bg-white dark:bg-white/5 border border-gray-200/80 dark:border-white/10 apple-card">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-2.5">
+                    <i class="fa-solid fa-server text-cyan-600 text-lg"></i>
+                    <span class="font-semibold text-sm text-gray-900 dark:text-white">MySQL</span>
+                  </div>
+                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 font-medium border border-blue-500/20">Working Knowledge</span>
+                </div>
+                <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                  Relational table schema design, primary/foreign keys, joins, indexation basics, and CRUD query syntax.
+                </p>
+              </div>
+
+              <!-- Data Management Overview Card -->
+              <div class="p-4 rounded-2xl bg-brand-red/5 border border-brand-red/15">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-brand-red mb-1">Architecture Mindset</h4>
+                <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                  Dedicated to clean normalization, relational consistency, and pairing persistent databases with intuitive client interfaces.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24 border-t border-gray-200/60 dark:border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <p class="text-xs uppercase tracking-widest text-brand-red font-semibold mb-2">Personal Competencies</p>
+          <h2 class="text-3xl font-extrabold font-display tracking-tight text-gray-950 dark:text-white">
+            Professional Strengths
+          </h2>
+          <p class="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400">
+            Core interpersonal and cognitive skills essential for effective technical collaboration.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          
+          <div class="glassmorphism p-4 sm:p-5 rounded-2xl text-center apple-card flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center mb-3 text-base">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h4 class="font-display font-semibold text-sm text-gray-900 dark:text-white mb-1">Quick Learner</h4>
+            <p class="text-[11px] text-gray-500 dark:text-gray-400">Rapidly masters emerging frameworks.</p>
+          </div>
+
+          <div class="glassmorphism p-4 sm:p-5 rounded-2xl text-center apple-card flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center mb-3 text-base">
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
+            <h4 class="font-display font-semibold text-sm text-gray-900 dark:text-white mb-1">Problem Solving</h4>
+            <p class="text-[11px] text-gray-500 dark:text-gray-400">Logical deconstruction of code bugs.</p>
+          </div>
+
+          <div class="glassmorphism p-4 sm:p-5 rounded-2xl text-center apple-card flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center mb-3 text-base">
+              <i class="fa-solid fa-shuffle"></i>
+            </div>
+            <h4 class="font-display font-semibold text-sm text-gray-900 dark:text-white mb-1">Adaptability</h4>
+            <p class="text-[11px] text-gray-500 dark:text-gray-400">Comfortable with evolving workflows.</p>
+          </div>
+
+          <div class="glassmorphism p-4 sm:p-5 rounded-2xl text-center apple-card flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center mb-3 text-base">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <h4 class="font-display font-semibold text-sm text-gray-900 dark:text-white mb-1">Emotional Int.</h4>
+            <p class="text-[11px] text-gray-500 dark:text-gray-400">Empathetic peer communication.</p>
+          </div>
+
+          <div class="glassmorphism p-4 sm:p-5 rounded-2xl text-center apple-card flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center mb-3 text-base">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h4 class="font-display font-semibold text-sm text-gray-900 dark:text-white mb-1">Teamwork</h4>
+            <p class="text-[11px] text-gray-500 dark:text-gray-400">Cross-functional mindset &amp; unity.</p>
+          </div>
+
+          <div class="glassmorphism p-4 sm:p-5 rounded-2xl text-center apple-card flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center mb-3 text-base">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <h4 class="font-display font-semibold text-sm text-gray-900 dark:text-white mb-1">Time Mgmt</h4>
+            <p class="text-[11px] text-gray-500 dark:text-gray-400">Disciplined task prioritization.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-gray-50/50 dark:bg-white/[0.01] border-t border-gray-200/60 dark:border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <p class="text-xs uppercase tracking-widest text-brand-red font-semibold mb-2">Developer Ecosystem</p>
+          <h2 class="text-3xl font-extrabold font-display tracking-tight text-gray-950 dark:text-white">
+            Tools &amp; Environments
+          </h2>
+          <p class="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400">
+            Daily instruments utilized for authoring, versioning, inspecting, and engineering solutions.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4">
+          
+          <!-- VS Code -->
+          <div class="glassmorphism p-5 rounded-2xl text-center apple-card flex flex-col items-center justify-center group">
+            <i class="fa-solid fa-code text-2xl text-blue-500 mb-2 transition-transform group-hover:scale-110"></i>
+            <span class="font-display font-semibold text-xs sm:text-sm text-gray-900 dark:text-white">VS Code</span>
+            <span class="text-[10px] text-gray-400 mt-0.5">Primary IDE</span>
+          </div>
+
+          <!-- Git -->
+          <div class="glassmorphism p-5 rounded-2xl text-center apple-card flex flex-col items-center justify-center group">
+            <i class="fa-brands fa-git-alt text-2xl text-orange-600 mb-2 transition-transform group-hover:scale-110"></i>
+            <span class="font-display font-semibold text-xs sm:text-sm text-gray-900 dark:text-white">Git</span>
+            <span class="text-[10px] text-gray-400 mt-0.5">Version Control</span>
+          </div>
+
+          <!-- GitHub -->
+          <div class="glassmorphism p-5 rounded-2xl text-center apple-card flex flex-col items-center justify-center group">
+            <i class="fa-brands fa-github text-2xl text-gray-800 dark:text-white mb-2 transition-transform group-hover:scale-110"></i>
+            <span class="font-display font-semibold text-xs sm:text-sm text-gray-900 dark:text-white">GitHub</span>
+            <span class="text-[10px] text-gray-400 mt-0.5">Collaboration</span>
+          </div>
+
+          <!-- Chrome DevTools -->
+          <div class="glassmorphism p-5 rounded-2xl text-center apple-card flex flex-col items-center justify-center group">
+            <i class="fa-brands fa-chrome text-2xl text-amber-500 mb-2 transition-transform group-hover:scale-110"></i>
+            <span class="font-display font-semibold text-xs sm:text-sm text-gray-900 dark:text-white">DevTools</span>
+            <span class="text-[10px] text-gray-400 mt-0.5">Profiling &amp; QA</span>
+          </div>
+
+          <!-- ChatGPT -->
+          <div class="glassmorphism p-5 rounded-2xl text-center apple-card flex flex-col items-center justify-center group">
+            <i class="fa-solid fa-brain text-2xl text-emerald-500 mb-2 transition-transform group-hover:scale-110"></i>
+            <span class="font-display font-semibold text-xs sm:text-sm text-gray-900 dark:text-white">ChatGPT</span>
+            <span class="text-[10px] text-gray-400 mt-0.5">AI Assistance</span>
+          </div>
+
+          <!-- Gemini -->
+          <div class="glassmorphism p-5 rounded-2xl text-center apple-card flex flex-col items-center justify-center group">
+            <i class="fa-solid fa-sparkles text-2xl text-blue-400 mb-2 transition-transform group-hover:scale-110"></i>
+            <span class="font-display font-semibold text-xs sm:text-sm text-gray-900 dark:text-white">Gemini</span>
+            <span class="text-[10px] text-gray-400 mt-0.5">AI Research</span>
+          </div>
+
+          <!-- Claude -->
+          <div class="glassmorphism p-5 rounded-2xl text-center apple-card flex flex-col items-center justify-center group col-span-2 sm:col-span-1">
+            <i class="fa-solid fa-microchip text-2xl text-amber-600 mb-2 transition-transform group-hover:scale-110"></i>
+            <span class="font-display font-semibold text-xs sm:text-sm text-gray-900 dark:text-white">Claude</span>
+            <span class="text-[10px] text-gray-400 mt-0.5">Code Reasoning</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="education" class="py-20 md:py-28 border-t border-gray-200/60 dark:border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <p class="text-xs uppercase tracking-widest text-brand-red font-semibold mb-2">Chronology</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-gray-950 dark:text-white">
+            Academic Journey
+          </h2>
+          <p class="mt-3 text-base text-gray-600 dark:text-gray-400">
+            A continuous dedication to computer science and information applications.
+          </p>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto">
+          <!-- Central Timeline Line -->
+          <div class="absolute left-4 sm:left-1/2 top-4 bottom-4 w-0.5 bg-gray-200 dark:bg-white/10 -translate-x-1/2"></div>
+
+          <div class="space-y-12">
+            
+            <!-- Item 1: MCA Ongoing -->
+            <div class="relative flex flex-col sm:flex-row items-start sm:items-center">
+              <div class="w-full sm:w-1/2 sm:pr-10 sm:text-right pl-12 sm:pl-0">
+                <span class="inline-block px-3 py-1 rounded-full text-xs font-bold text-brand-red bg-red-500/10 border border-brand-red/20 mb-1">
+                  2025 – 2027 &bull; Currently Pursuing
+                </span>
+                <h3 class="text-xl font-bold font-display text-gray-950 dark:text-white">Master of Computer Applications (MCA)</h3>
+                <p class="text-sm font-semibold text-gray-700 dark:text-gray-300">Kalinga University</p>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Raipur, Chhattisgarh &bull; Post-graduate specialization in software systems, database engineering, and advanced computing.</p>
+              </div>
+
+              <!-- Node Center Indicator -->
+              <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center text-xs shadow-md z-10 ring-4 ring-white dark:ring-[#090A0D]">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+
+              <div class="w-full sm:w-1/2 sm:pl-10 mt-3 sm:mt-0 pl-12">
+                <div class="p-4 rounded-2xl glassmorphism text-xs text-gray-600 dark:text-gray-400 leading-relaxed border-l-2 border-brand-red">
+                  Deepening analytical thinking, advanced software methodologies, and distributed architectures to prepare for enterprise web engineering.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2: BCA -->
+            <div class="relative flex flex-col sm:flex-row items-start sm:items-center">
+              <div class="w-full sm:w-1/2 sm:pr-10 sm:text-right order-2 sm:order-1 mt-3 sm:mt-0 pl-12 sm:pl-0">
+                <div class="p-4 rounded-2xl glassmorphism text-xs text-gray-600 dark:text-gray-400 leading-relaxed border-l-2 sm:border-l-0 sm:border-r-2 border-brand-red">
+                  Graduated with a solid foundation in C, C++, Data Structures, Web Technologies, Database Systems, and Operating Systems.
+                </div>
+              </div>
+
+              <!-- Node Center Indicator -->
+              <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white dark:bg-brand-charcoal text-brand-red border-2 border-brand-red flex items-center justify-center text-xs shadow-md z-10 order-1 sm:order-2 ring-4 ring-white dark:ring-[#090A0D]">
+                <i class="fa-solid fa-award"></i>
+              </div>
+
+              <div class="w-full sm:w-1/2 sm:pl-10 order-1 sm:order-3 pl-12">
+                <span class="inline-block px-3 py-1 rounded-full text-xs font-bold text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 mb-1">
+                  2022 – 2025 &bull; Graduated
+                </span>
+                <div class="flex items-center gap-2">
+                  <h3 class="text-xl font-bold font-display text-gray-950 dark:text-white">Bachelor of Computer Applications</h3>
+                  <span class="px-2 py-0.5 text-xs font-extrabold bg-brand-red text-white rounded-md">CGPA 7.35</span>
+                </div>
+                <p class="text-sm font-semibold text-gray-700 dark:text-gray-300">Techno India University</p>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Kolkata, West Bengal &bull; Core computing curriculum completed with formal academic distinction.</p>
+              </div>
+            </div>
+
+            <!-- Item 3: Senior Secondary -->
+            <div class="relative flex flex-col sm:flex-row items-start sm:items-center">
+              <div class="w-full sm:w-1/2 sm:pr-10 sm:text-right pl-12 sm:pl-0">
+                <span class="inline-block px-3 py-1 rounded-full text-xs font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 mb-1">
+                  Higher Secondary (Class XII)
+                </span>
+                <h3 class="text-lg font-bold font-display text-gray-950 dark:text-white">GD Goenka Public School</h3>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Science &amp; analytical preparatory coursework.</p>
+              </div>
+
+              <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-gray-200 dark:bg-white/20 text-gray-600 dark:text-gray-300 flex items-center justify-center text-xs z-10 ring-4 ring-white dark:ring-[#090A0D]">
+                <i class="fa-solid fa-school"></i>
+              </div>
+
+              <div class="w-full sm:w-1/2 sm:pl-10 mt-2 sm:mt-0 pl-12">
+                <span class="text-xs text-gray-500 dark:text-gray-400">Class X completed at <strong class="text-gray-900 dark:text-white font-medium">DPS North Kolkata</strong>, establishing early discipline and mathematical rigor.</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects" class="py-20 md:py-28 bg-gray-50/50 dark:bg-white/[0.01] border-t border-gray-200/60 dark:border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 md:mb-16">
+          <div class="max-w-2xl">
+            <p class="text-xs uppercase tracking-widest text-brand-red font-semibold mb-2">Featured Engineering Showcase</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-gray-950 dark:text-white">
+              Flagship Project
+            </h2>
+            <p class="mt-3 text-base text-gray-600 dark:text-gray-400">
+              A comprehensive single-file luxury single-page application demonstrating zero-dependency client architecture.
+            </p>
+          </div>
+          <div class="mt-4 md:mt-0">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Verified Live Deployment
+            </span>
+          </div>
+        </div>
+
+        <!-- Featured Project Card: LUXORA -->
+        <div class="glassmorphism rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-apple">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+            
+            <!-- Left Project Narrative & Feature Catalog -->
+            <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="px-3 py-1 rounded-md text-xs font-bold bg-brand-red text-white uppercase tracking-wider">
+                    Full Single Page App
+                  </span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-gray-200">
+                    52-Product Catalog
+                  </span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-gray-200">
+                    Pure Vanilla JS
+                  </span>
+                </div>
+
+                <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-gray-950 dark:text-white tracking-tight">
+                  LUXORA &mdash; Premium E-Commerce Web App
+                </h3>
+
+                <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  A standalone, production-style luxury e-commerce web application featuring a bespoke dark Glassmorphism UI in deep black and vibrant gold/yellow. Built entirely within a <strong class="text-gray-900 dark:text-white">single .html file with zero build steps or heavy frameworks</strong>, it delivers a complete Single Page Application shopping experience—including real-time search, dynamic filtering, persistent cart and wishlist, multi-step checkout, and order history tracking.
+                </p>
+
+                <!-- Technology Badges -->
+                <div class="pt-2">
+                  <h4 class="text-xs uppercase font-semibold text-gray-400 mb-2">Technologies Utilized</h4>
+                  <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                    <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300">HTML5</span>
+                    <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300">CSS3</span>
+                    <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300">Vanilla JavaScript</span>
+                    <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300">Browser Web APIs</span>
+                    <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300">localStorage</span>
+                    <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300">Plus Jakarta Sans</span>
+                  </div>
+                </div>
+
+                <!-- Comprehensive Features Highlights Grid -->
+                <div class="pt-4 border-t border-gray-200 dark:border-white/10">
+                  <h4 class="text-xs uppercase font-semibold text-gray-400 mb-3">Architectural Highlights &amp; Systems</h4>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-600 dark:text-gray-400">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> 52 Unique Products across 5 Categories</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Real-time Search, Price &amp; Stock Filters</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Persistent Cart &amp; Wishlist via localStorage</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> 18% GST, Promo Logic &amp; Shipping Math</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Multi-Step Checkout with PIN / Phone Validation</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> UPI, Card, and COD Payment Simulations</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Client Account Dashboard &amp; Order History</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Flash-sale countdown timer &amp; Toast notifications</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Action Links: Guaranteed Functional Live Demo -->
+              <div class="pt-6 flex flex-wrap items-center gap-3">
+                <a 
+                  href="https://ecommerce-project-omega-gilt.vercel.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm bg-brand-red hover:bg-brand-red-hover text-white shadow-red-soft transition-all duration-200 hover:scale-[1.02] focus:ring-2 focus:ring-brand-red"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                  <span>Launch Live Demo</span>
+                </a>
+                
+                <a 
+                  href="https://github.com/Rishabhkumar-0914" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-medium text-sm border border-gray-200 dark:border-white/10 hover:border-brand-red text-gray-700 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-red transition-colors"
+                >
+                  <i class="fa-brands fa-github text-base"></i>
+                  <span>Explore Developer GitHub</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Interactive Graphical Mockup -->
+            <div class="lg:col-span-5 bg-gradient-to-br from-brand-charcoal to-black p-6 sm:p-8 flex flex-col justify-center items-center relative border-t lg:border-t-0 lg:border-l border-white/10">
+              <div class="w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-[#121316] relative group">
+                
+                <!-- Mockup Window Bar -->
+                <div class="px-4 py-2.5 bg-black/60 border-b border-white/10 flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                  </div>
+                  <span class="text-[10px] font-mono text-gray-400">luxora-store.vercel.app</span>
+                  <i class="fa-solid fa-lock text-[10px] text-gray-500"></i>
+                </div>
+
+                <!-- Mockup Content Canvas -->
+                <div class="p-4 space-y-4">
+                  <div class="flex items-center justify-between border-b border-white/5 pb-2">
+                    <span class="font-display font-bold text-amber-400 text-sm tracking-wider">LUXORA</span>
+                    <div class="flex gap-2 text-gray-400 text-xs">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <i class="fa-solid fa-heart"></i>
+                      <i class="fa-solid fa-bag-shopping text-amber-400"></i>
+                    </div>
+                  </div>
+
+                  <!-- Mini Product Showcase Cards inside Mockup -->
+                  <div class="grid grid-cols-2 gap-2 text-left">
+                    <div class="p-2 rounded-xl bg-white/5 border border-white/5">
+                      <div class="h-16 rounded-lg bg-gray-800/80 flex items-center justify-center text-amber-400/80 text-xl mb-1.5">
+                        <i class="fa-solid fa-headphones"></i>
+                      </div>
+                      <p class="text-[11px] font-medium text-white truncate">Spatial Audio X9</p>
+                      <p class="text-[10px] text-amber-400 font-semibold">$299 &bull; <span class="text-emerald-400">In Stock</span></p>
+                    </div>
+
+                    <div class="p-2 rounded-xl bg-white/5 border border-white/5">
+                      <div class="h-16 rounded-lg bg-gray-800/80 flex items-center justify-center text-amber-400/80 text-xl mb-1.5">
+                        <i class="fa-solid fa-stopwatch"></i>
+                      </div>
+                      <p class="text-[11px] font-medium text-white truncate">Chrono Imperial</p>
+                      <p class="text-[10px] text-amber-400 font-semibold">$540 &bull; <span class="text-emerald-400">In Stock</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Checkout Simulator Indicator -->
+                  <div class="p-2.5 rounded-xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-between text-[11px]">
+                    <span class="text-amber-300 font-medium">Cart: 2 Items | 18% GST</span>
+                    <span class="px-2 py-0.5 rounded bg-amber-400 text-black font-bold text-[10px]">Active Order</span>
+                  </div>
+                </div>
+
+                <!-- Hover Overlay -->
+                <a 
+                  href="https://ecommerce-project-omega-gilt.vercel.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="absolute inset-0 bg-black/70 backdrop-blur-xs flex items-center justify-center gap-2 text-white font-semibold text-xs opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <i class="fa-solid fa-external-link"></i> Launch Live Application
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="certifications" class="py-20 md:py-28 border-t border-gray-200/60 dark:border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <p class="text-xs uppercase tracking-widest text-brand-red font-semibold mb-2">Verified Skill Validations</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-gray-950 dark:text-white">
+            Certifications
+          </h2>
+          <p class="mt-3 text-base text-gray-600 dark:text-gray-400">
+            Standardized technical assessments verified through HackerRank.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          
+          <!-- HackerRank JavaScript -->
+          <div class="glassmorphism p-6 rounded-3xl apple-card flex flex-col justify-between border-t-4 border-t-brand-red">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="w-9 h-9 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-base">
+                  <i class="fa-brands fa-hackerrank"></i>
+                </span>
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-500 font-semibold">Verified</span>
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-lg text-gray-950 dark:text-white">JavaScript (Basic)</h3>
+                <p class="text-xs text-brand-red font-semibold">HackerRank Certification</p>
+              </div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                Validation of essential JavaScript constructs including closures, prototypes, event loops, arrays, and syntax handling.
+              </p>
+            </div>
+
+            <div class="pt-6">
+              <a 
+                href="https://www.hackerrank.com/certificates/iframe/48750eea1a9a" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white hover:bg-brand-red hover:text-white dark:hover:bg-brand-red transition-all"
+              >
+                <span>Verify Certificate</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- HackerRank Problem Solving -->
+          <div class="glassmorphism p-6 rounded-3xl apple-card flex flex-col justify-between border-t-4 border-t-brand-red">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="w-9 h-9 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-base">
+                  <i class="fa-brands fa-hackerrank"></i>
+                </span>
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-500 font-semibold">Verified</span>
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-lg text-gray-950 dark:text-white">Problem Solving</h3>
+                <p class="text-xs text-brand-red font-semibold">HackerRank Certification</p>
+              </div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                Assessment covering core algorithms, time complexity fundamentals, arrays, math logic, and conditional problem deduction.
+              </p>
+            </div>
+
+            <div class="pt-6">
+              <a 
+                href="https://www.hackerrank.com/certificates/iframe/48750eea1a9a" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white hover:bg-brand-red hover:text-white dark:hover:bg-brand-red transition-all"
+              >
+                <span>Verify Certificate</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- HackerRank CSS -->
+          <div class="glassmorphism p-6 rounded-3xl apple-card flex flex-col justify-between border-t-4 border-t-brand-red">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="w-9 h-9 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-base">
+                  <i class="fa-brands fa-hackerrank"></i>
+                </span>
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-500 font-semibold">Verified</span>
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-lg text-gray-950 dark:text-white">CSS</h3>
+                <p class="text-xs text-brand-red font-semibold">HackerRank Certification</p>
+              </div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                Proficiency evaluation covering the box model, CSS cascading priority, flex alignment, layout positioning, and media responsiveness.
+              </p>
+            </div>
+
+            <div class="pt-6">
+              <a 
+                href="https://www.hackerrank.com/certificates/iframe/bbd3c3ae17ad" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white hover:bg-brand-red hover:text-white dark:hover:bg-brand-red transition-all"
+              >
+                <span>Verify Certificate</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-gray-50/50 dark:bg-white/[0.01] border-t border-gray-200/60 dark:border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <p class="text-xs uppercase tracking-widest text-brand-red font-semibold mb-2">Milestones</p>
+          <h2 class="text-3xl font-extrabold font-display tracking-tight text-gray-950 dark:text-white">
+            Key Achievements
+          </h2>
+          <p class="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400">
+            Documented academic and technical milestones grounded in actual performance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="glassmorphism p-6 rounded-2xl apple-card">
+            <div class="text-brand-red text-2xl mb-3"><i class="fa-solid fa-user-graduate"></i></div>
+            <h4 class="font-display font-bold text-base text-gray-900 dark:text-white">BCA Degree Completion</h4>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1.5 leading-relaxed">
+              Successfully completed 3 years of computer applications at Techno India University with a cumulative 7.35 CGPA.
+            </p>
+          </div>
+
+          <div class="glassmorphism p-6 rounded-2xl apple-card">
+            <div class="text-brand-red text-2xl mb-3"><i class="fa-solid fa-layer-group"></i></div>
+            <h4 class="font-display font-bold text-base text-gray-900 dark:text-white">Complex Single-File SPA</h4>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1.5 leading-relaxed">
+              Engineered LUXORA — a complete 52-item shopping ecosystem inside 1 single .html file without any external framework dependencies.
+            </p>
+          </div>
+
+          <div class="glassmorphism p-6 rounded-2xl apple-card">
+            <div class="text-brand-red text-2xl mb-3"><i class="fa-solid fa-certificate"></i></div>
+            <h4 class="font-display font-bold text-base text-gray-900 dark:text-white">HackerRank Certifications</h4>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1.5 leading-relaxed">
+              Earned verified skill credentials across JavaScript, Problem Solving, and CSS via direct algorithmic and code testing.
+            </p>
+          </div>
+
+          <div class="glassmorphism p-6 rounded-2xl apple-card">
+            <div class="text-brand-red text-2xl mb-3"><i class="fa-solid fa-compass"></i></div>
+            <h4 class="font-display font-bold text-base text-gray-900 dark:text-white">MCA Program Progression</h4>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1.5 leading-relaxed">
+              Admitted and currently pursuing the MCA program at Kalinga University to deepen computer science foundations.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-20 md:py-28 border-t border-gray-200/60 dark:border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <p class="text-xs uppercase tracking-widest text-brand-red font-semibold mb-2">Capabilities</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-gray-950 dark:text-white">
+            What I Can Build
+          </h2>
+          <p class="mt-3 text-base text-gray-600 dark:text-gray-400">
+            Practical competencies available for software engineering internships and junior frontend positions.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="glassmorphism p-6 rounded-3xl apple-card space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center text-xl">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3 class="font-display font-bold text-lg text-gray-950 dark:text-white">Web Development</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+              Creating fully responsive, fluid websites using clean HTML5, modern CSS3, and modular vanilla JavaScript.
+            </p>
+          </div>
+
+          <div class="glassmorphism p-6 rounded-3xl apple-card space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center text-xl">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="font-display font-bold text-lg text-gray-950 dark:text-white">Frontend Interfaces</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+              Building interactive interfaces with Apple-inspired visual minimalism, Glassmorphism, and intuitive state handling.
+            </p>
+          </div>
+
+          <div class="glassmorphism p-6 rounded-3xl apple-card space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center text-xl">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <h3 class="font-display font-bold text-lg text-gray-950 dark:text-white">E-Commerce Systems</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+              Dynamic product catalogs, responsive search, persistent cart calculation, checkout flows, and customer dashboards.
+            </p>
+          </div>
+
+          <div class="glassmorphism p-6 rounded-3xl apple-card space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center text-xl">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 class="font-display font-bold text-lg text-gray-950 dark:text-white">UI Implementation</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+              Translating design mockups and Figma structures into pixel-perfect, accessible, semantic web code.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-gray-50/50 dark:bg-white/[0.01] border-t border-gray-200/60 dark:border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-4xl mx-auto glassmorphism p-6 sm:p-8 rounded-3xl border border-gray-200 dark:border-white/10 apple-card">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            
+            <div class="flex items-center gap-4 text-center sm:text-left">
+              <div class="w-16 h-16 rounded-2xl bg-black text-white dark:bg-white/10 flex items-center justify-center text-3xl shadow-sm">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div>
+                <div class="flex items-center justify-center sm:justify-start gap-2">
+                  <h3 class="font-display font-bold text-xl text-gray-950 dark:text-white">Rishabhkumar-0914</h3>
+                  <span id="ghStatusBadge" class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500 font-semibold">Active</span>
+                </div>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Open source codebases, single-page experiments &amp; technical repositories.</p>
+              </div>
+            </div>
+
+            <a 
+              href="https://github.com/Rishabhkumar-0914" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-semibold bg-gray-900 text-white hover:bg-brand-red dark:bg-white dark:text-gray-950 dark:hover:bg-brand-red dark:hover:text-white transition-all shadow-sm shrink-0"
+            >
+              <span>View My GitHub</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+
+          </div>
+
+          <!-- Dynamic GitHub Stats Placeholder -->
+          <div id="githubDetails" class="mt-6 pt-6 border-t border-gray-200 dark:border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            <div class="p-3 rounded-xl bg-gray-100/70 dark:bg-white/5">
+              <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Platform</span>
+              <span class="font-display font-bold text-sm text-gray-900 dark:text-white">GitHub</span>
+            </div>
+            <div class="p-3 rounded-xl bg-gray-100/70 dark:bg-white/5">
+              <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Handle</span>
+              <span class="font-display font-bold text-sm text-gray-900 dark:text-white">@Rishabhkumar</span>
+            </div>
+            <div class="p-3 rounded-xl bg-gray-100/70 dark:bg-white/5">
+              <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Ecosystem</span>
+              <span class="font-display font-bold text-sm text-brand-red">Web &amp; C++</span>
+            </div>
+            <div class="p-3 rounded-xl bg-gray-100/70 dark:bg-white/5">
+              <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Availability</span>
+              <span class="font-display font-bold text-sm text-emerald-500">Collaborating</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 md:py-28 border-t border-gray-200/60 dark:border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <p class="text-xs uppercase tracking-widest text-brand-red font-semibold mb-2">Connect Directly</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-gray-950 dark:text-white">
+            Get In Touch
+          </h2>
+          <p class="mt-3 text-base text-gray-600 dark:text-gray-400">
+            Open to developer roles, graduate trainee positions, and collaborative inquiries.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Contact Direct Details Cards -->
+          <div class="lg:col-span-5 space-y-4">
+            
+            <!-- Email -->
+            <a href="mailto:rkumar.kumar0914@gmail.com" class="block p-5 rounded-2xl glassmorphism apple-card group">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-lg group-hover:scale-105 transition-transform">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] uppercase tracking-wider font-semibold text-gray-400">Email Address</span>
+                  <p class="text-sm sm:text-base font-bold text-gray-950 dark:text-white group-hover:text-brand-red transition-colors">
+                    rkumar.kumar0914@gmail.com
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:8100601097" class="block p-5 rounded-2xl glassmorphism apple-card group">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-lg group-hover:scale-105 transition-transform">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] uppercase tracking-wider font-semibold text-gray-400">Direct Phone</span>
+                  <p class="text-sm sm:text-base font-bold text-gray-950 dark:text-white group-hover:text-brand-red transition-colors">
+                    +91 8100601097
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <!-- Location -->
+            <div class="p-5 rounded-2xl glassmorphism apple-card">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-lg">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] uppercase tracking-wider font-semibold text-gray-400">Location</span>
+                  <p class="text-sm sm:text-base font-bold text-gray-950 dark:text-white">
+                    Kolkata, West Bengal, India
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media Hub -->
+            <div class="p-5 rounded-2xl glassmorphism space-y-3">
+              <span class="text-xs uppercase tracking-wider font-semibold text-gray-400 block">External Profiles</span>
+              <div class="flex gap-3">
+                <a 
+                  href="https://github.com/Rishabhkumar-0914" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="flex-1 py-2.5 rounded-xl border border-gray-200 dark:border-white/10 bg-white/50 dark:bg-white/5 hover:border-brand-red dark:hover:border-brand-red text-center text-xs font-semibold text-gray-800 dark:text-white flex items-center justify-center gap-2 transition-colors"
+                >
+                  <i class="fa-brands fa-github text-sm"></i> GitHub
+                </a>
+
+                <a 
+                  href="https://www.linkedin.com/in/rishabh-kumar-633920321" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="flex-1 py-2.5 rounded-xl border border-gray-200 dark:border-white/10 bg-white/50 dark:bg-white/5 hover:border-brand-red dark:hover:border-brand-red text-center text-xs font-semibold text-gray-800 dark:text-white flex items-center justify-center gap-2 transition-colors"
+                >
+                  <i class="fa-brands fa-linkedin text-sm text-[#0A66C2]"></i> LinkedIn
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Working Client-Side Validated Contact Form -->
+          <div class="lg:col-span-7 glassmorphism p-6 sm:p-8 rounded-3xl">
+            <h3 class="text-xl font-bold font-display text-gray-950 dark:text-white mb-2">Send a Message</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-6">
+              Submissions compile your details directly into a pre-filled email draft to ensure reliable transmission with zero static backend failures.
+            </p>
+
+            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4" novalidate>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="senderName" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Your Name *</label>
+                  <input 
+                    type="text" 
+                    id="senderName" 
+                    required 
+                    placeholder="e.g. Rishabh Kumar"
+                    class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/5 text-gray-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-red transition-all"
+                  />
+                  <p id="nameError" class="hidden text-[11px] text-red-500 mt-1">Please enter your name.</p>
+                </div>
+
+                <div>
+                  <label for="senderEmail" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Email Address *</label>
+                  <input 
+                    type="email" 
+                    id="senderEmail" 
+                    required 
+                    placeholder="Rishabh@example.com"
+                    class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/5 text-gray-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-red transition-all"
+                  />
+                  <p id="emailError" class="hidden text-[11px] text-red-500 mt-1">Please provide a valid email.</p>
+                </div>
+              </div>
+
+              <div>
+                <label for="senderSubject" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Subject *</label>
+                <input 
+                  type="text" 
+                  id="senderSubject" 
+                  required 
+                  placeholder="Opportunity / Project Collaboration"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/5 text-gray-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-red transition-all"
+                />
+                <p id="subjectError" class="hidden text-[11px] text-red-500 mt-1">Please provide a subject.</p>
+              </div>
+
+              <div>
+                <label for="senderMessage" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Message *</label>
+                <textarea 
+                  id="senderMessage" 
+                  rows="4" 
+                  required 
+                  placeholder="Write your note or project requirements..."
+                  class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/5 text-gray-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-red transition-all resize-none"
+                ></textarea>
+                <p id="messageError" class="hidden text-[11px] text-red-500 mt-1">Please enter your message.</p>
+              </div>
+
+              <div id="formSuccessAlert" class="hidden p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs">
+                <i class="fa-solid fa-circle-check mr-1.5"></i> Opening your email client to dispatch this message...
+              </div>
+
+              <button 
+                type="submit" 
+                class="w-full py-3.5 px-6 rounded-xl font-semibold text-sm bg-brand-red hover:bg-brand-red-hover text-white shadow-red-soft transition-all duration-200 flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-red"
+              >
+                <span>Send Message via Email</span>
+                <i class="fa-solid fa-paper-plane text-xs"></i>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="resumeModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm transition-opacity" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+    <div class="glassmorphism w-full max-w-2xl rounded-3xl p-6 sm:p-8 space-y-6 relative border border-white/10 shadow-2xl">
+      
+      <div class="flex items-center justify-between border-b border-gray-200 dark:border-white/10 pb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-red text-white flex items-center justify-center text-lg">
+            <i class="fa-solid fa-file-pdf"></i>
+          </div>
+          <div>
+            <h3 id="resumeModalTitle" class="font-display font-bold text-lg text-gray-950 dark:text-white">Curriculum Vitae</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Rishabh Kumar &bull; Student &amp; Aspiring Web Developer</p>
+          </div>
+        </div>
+        <button onclick="closeResumeModal()" class="p-2 rounded-xl text-gray-400 hover:text-gray-600 dark:hover:text-white focus:outline-none" aria-label="Close modal">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+        <p>
+          The formal PDF resume contains detailed breakdowns of:
+        </p>
+        <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300 pl-1 font-medium">
+          <li>Class 10 (DPS North Kolkata) &amp; Class 12 (GD Goenka) marks</li>
+          <li>BCA Degree from Techno India University (CGPA 7.35)</li>
+          <li>Ongoing MCA at Kalinga University (2025–2027)</li>
+          <li>LUXORA single-file E-commerce architectural specifications</li>
+          <li>Verified HackerRank certifications in JavaScript, CSS, &amp; Problem Solving</li>
+        </ul>
+<!--
+        <div class="p-3 rounded-xl bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-xs">
+          <span class="font-semibold text-brand-red"><i class="fa-solid fa-circle-info mr-1"></i> Deployment Note:</span>
+          Place your updated <code class="font-mono bg-black/10 dark:bg-black/40 px-1 py-0.5 rounded">resume.pdf</code> in the root directory alongside this <code class="font-mono bg-black/10 dark:bg-black/40 px-1 py-0.5 rounded">index.html</code>.
+        </div>
+-->
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3 pt-2">
+        <a 
+          href="resume.pdf" 
+          target="_blank" 
+          class="flex-1 py-3 px-4 rounded-xl text-xs font-semibold text-center border border-gray-200 dark:border-white/10 text-gray-800 dark:text-white hover:border-brand-red transition-colors flex items-center justify-center gap-2"
+        >
+          <i class="fa-solid fa-eye"></i> View in Browser
+        </a>
+        <a 
+          href="resume.pdf" 
+          download="Rishabh_Kumar_Resume.pdf" 
+          class="flex-1 py-3 px-4 rounded-xl text-xs font-semibold text-center bg-brand-red hover:bg-brand-red-hover text-white transition-colors flex items-center justify-center gap-2 shadow-red-soft"
+        >
+          <i class="fa-solid fa-download"></i> Download PDF
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="border-t border-gray-200/60 dark:border-white/5 py-12 bg-white/50 dark:bg-black/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <div class="text-center md:text-left space-y-1">
+          <span class="font-display font-bold text-lg text-gray-950 dark:text-white">Rishabh Kumar</span>
+          <p class="text-xs text-gray-500 dark:text-gray-400">Student &amp; Aspiring Web Developer &bull; Kolkata, India</p>
+        </div>
+
+        <!-- Navigation Links in Footer -->
+        <div class="flex flex-wrap justify-center gap-6 text-xs font-medium text-gray-600 dark:text-gray-400">
+          <a href="#home" class="hover:text-brand-red transition-colors">Home</a>
+          <a href="#about" class="hover:text-brand-red transition-colors">About</a>
+          <a href="#projects" class="hover:text-brand-red transition-colors">Projects</a>
+          <a href="#contact" class="hover:text-brand-red transition-colors">Contact</a>
+          <a href="https://github.com/Rishabhkumar-0914" target="_blank" rel="noopener noreferrer" class="hover:text-brand-red transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/rishabh-kumar-633920321" target="_blank" rel="noopener noreferrer" class="hover:text-brand-red transition-colors">LinkedIn</a>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-8 border-t border-gray-200 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <p>&copy; 2026 Rishabh Kumar. All rights reserved.</p>
+        <p class="flex items-center gap-1.5">
+          Engineered with precision <span class="w-1.5 h-1.5 rounded-full bg-brand-red inline-block"></span> Apple-inspired aesthetics
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    /* Theme Toggle with localStorage Persistence & System Detection */
+    const htmlEl = document.documentElement;
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        htmlEl.classList.add('dark');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      } else {
+        htmlEl.classList.remove('dark');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      }
+      localStorage.setItem('rishabh_theme', theme);
+    }
+
+    // Determine initial theme
+    const savedTheme = localStorage.getItem('rishabh_theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme) {
+      applyTheme(savedTheme);
+    } else {
+      applyTheme(systemPrefersDark ? 'dark' : 'light');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      const isDark = htmlEl.classList.contains('dark');
+      applyTheme(isDark ? 'light' : 'dark');
+    });
+
+    /* Mobile Drawer Menu Toggle */
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('hidden');
+      
+      if (!isExpanded) {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+      } else {
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      }
+    });
+
+    // Close mobile menu when an item is tapped
+    document.querySelectorAll('.mobile-nav-item').forEach(item => {
+      item.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      });
+    });
+
+    /* Active Navigation State on Scroll */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let currentSectionId = '';
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+
+    /* Resume Modal Handling */
+    const resumeModal = document.getElementById('resumeModal');
+
+    function openResumeModal() {
+      resumeModal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeResumeModal() {
+      resumeModal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    resumeModal.addEventListener('click', (e) => {
+      if (e.target === resumeModal) {
+        closeResumeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !resumeModal.classList.contains('hidden')) {
+        closeResumeModal();
+      }
+    });
+
+    /* Contact Form Client-side Validation & Mailto Action */
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      
+      const nameInput = document.getElementById('senderName');
+      const emailInput = document.getElementById('senderEmail');
+      const subjectInput = document.getElementById('senderSubject');
+      const messageInput = document.getElementById('senderMessage');
+
+      const nameError = document.getElementById('nameError');
+      const emailError = document.getElementById('emailError');
+      const subjectError = document.getElementById('subjectError');
+      const messageError = document.getElementById('messageError');
+      const successAlert = document.getElementById('formSuccessAlert');
+
+      let isValid = true;
+
+      // Validate Name
+      if (!nameInput.value.trim()) {
+        nameError.classList.remove('hidden');
+        isValid = false;
+      } else {
+        nameError.classList.add('hidden');
+      }
+
+      // Validate Email
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailInput.value.trim() || !emailPattern.test(emailInput.value.trim())) {
+        emailError.classList.remove('hidden');
+        isValid = false;
+      } else {
+        emailError.classList.add('hidden');
+      }
+
+      // Validate Subject
+      if (!subjectInput.value.trim()) {
+        subjectError.classList.remove('hidden');
+        isValid = false;
+      } else {
+        subjectError.classList.add('hidden');
+      }
+
+      // Validate Message
+      if (!messageInput.value.trim()) {
+        messageError.classList.remove('hidden');
+        isValid = false;
+      } else {
+        messageError.classList.add('hidden');
+      }
+
+      if (isValid) {
+        successAlert.classList.remove('hidden');
+        
+        const recipient = 'rkumar.kumar0914@gmail.com';
+        const subjectEncoded = encodeURIComponent(`[Portfolio Inquiry] ${subjectInput.value.trim()} - from ${nameInput.value.trim()}`);
+        const bodyContent = `Name: ${nameInput.value.trim()}\nEmail: ${emailInput.value.trim()}\n\nMessage:\n${messageInput.value.trim()}`;
+        const bodyEncoded = encodeURIComponent(bodyContent);
+
+        // Open mail client safely
+        setTimeout(() => {
+          window.location.href = `mailto:${recipient}?subject=${subjectEncoded}&body=${bodyEncoded}`;
+        }, 500);
+      }
+    }
+
+    /* Safe GitHub Public API Hydration with Guaranteed Fallback */
+    (async function fetchGitHubSummary() {
+      try {
+        const response = await fetch('https://api.github.com/users/Rishabhkumar-0914', {
+          headers: { 'Accept': 'application/vnd.github.v3+json' }
+        });
+        if (!response.ok) return; // Keep clean static fallback
+        const data = await response.json();
+        
+        const detailsContainer = document.getElementById('githubDetails');
+        if (detailsContainer && data.public_repos !== undefined) {
+          detailsContainer.innerHTML = `
+            <div class="p-3 rounded-xl bg-gray-100/70 dark:bg-white/5">
+              <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Repositories</span>
+              <span class="font-display font-bold text-sm text-gray-900 dark:text-white">${data.public_repos} Public</span>
+            </div>
+            <div class="p-3 rounded-xl bg-gray-100/70 dark:bg-white/5">
+              <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Followers</span>
+              <span class="font-display font-bold text-sm text-gray-900 dark:text-white">${data.followers} Active</span>
+            </div>
+            <div class="p-3 rounded-xl bg-gray-100/70 dark:bg-white/5">
+              <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Location</span>
+              <span class="font-display font-bold text-sm text-brand-red">${data.location || 'Kolkata, IN'}</span>
+            </div>
+            <div class="p-3 rounded-xl bg-gray-100/70 dark:bg-white/5">
+              <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Status</span>
+              <span class="font-display font-bold text-sm text-emerald-500">Available</span>
+            </div>
+          `;
+        }
+      } catch (err) {
+        // Fallback card remains intact without disrupting user flow
+      }
+    })();
+  </script>
+</body>
+</html>
